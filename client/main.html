@@ -1,0 +1,78 @@
+<head>
+    <title>test-meteor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+{{> navigation}}
+</body>
+<template name="home">
+    {{#if currentUser}}
+        Welcome Back
+    {{else}}
+        You are currently not logged in
+    {{/if}}
+</template>
+
+<template name="navigation">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="{{pathFor route='home'}}">Home</a></li>
+                {{#if currentUser}}
+                    <li><a href="#" class="logout">Logout</a></li>
+                {{else}}
+                <li><a href="{{pathFor route='register'}}">Register</a></li>
+                <li><a href="{{pathFor route='login'}}">Login</a></li>
+                {{/if}}
+
+            </ul>
+        </div>
+    </nav>
+</template>
+
+<template name="register">
+    <h2>Register</h2>
+    {{#if currentUser}}
+        <h1>You Are Already logged in</h1>
+    {{else}}
+        <form>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" name="email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" name="password">
+            </div>
+            <input type="submit" class="btn btn-info" value="Register">
+        </form>
+    {{/if}}
+</template>
+
+<template name="login">
+    <h2>Login</h2>
+    {{#if currentUser}}
+        <h1>You Are Already logged in</h1>
+    {{else}}
+        <form>
+            <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" name="email">
+            </div>
+            <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" name="password">
+            </div>
+            <input type="submit" class="btn btn-info" value="Login">
+        </form>
+    {{/if}}
+</template>
