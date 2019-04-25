@@ -16,6 +16,11 @@ Ensure that you have Meteor installed
 - [ ] Personalized Landing Page After Login
 - [ ] Swap out Mustache with React
 
+## DONE
+
+- [x] Pretty Bootstrap theme
+- [X] Login logout
+
 ## License
 
 MIT License
