@@ -1,4 +1,4 @@
-# test-meteor
+# my-meteor-playground
 This project is a collection of my various misadventures in meteor.
 Hopefully it might serve as a useful boilerplate to someone else
 

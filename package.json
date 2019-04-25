@@ -1,5 +1,5 @@
 {
-  "name": "test-meteor",
+  "name": "my-meteor-playground",
   "private": true,
   "scripts": {
     "start": "meteor run",
